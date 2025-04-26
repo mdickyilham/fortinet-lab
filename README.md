@@ -2,7 +2,7 @@
   <img src="Fortinet_Logo.png">
 </p>
 
-## [✍️ Your Name]'s Cloud Journey
+## [✍️ Muhamad Dicky Ilhamsyah]'s Fortinet Journey
 
 [✍️ Introduce yourself]
 
