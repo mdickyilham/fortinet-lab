@@ -1,6 +1,7 @@
 **Add a cover photo like:**
+# Topologi Basic
 <p align="center">
-  <img src="topologi.png">
+  <img src="img/topologi.png">
 </p>
 
 # New post title here
