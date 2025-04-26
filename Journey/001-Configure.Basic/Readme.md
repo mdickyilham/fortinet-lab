@@ -4,41 +4,65 @@
   <img src="img/topologi.png">
 </p>
 
-# New post title here
+# Configure Basic
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+✍️ Kali ini kita konfigurasikan dasar dari Fortinet dengan menggunakan VMWare dan Install Pnetlab
 
 ## Prerequisite
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+✍️ Konfigurasi kali ini membutuhkan pengetahuan konfigurasi dasar jaringan
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+✍️ Digunakan saat pertama kali konfigurasi di perangkat Fortinet 
 
-## Cloud Research
+## Fortinet Research
 
 - ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
 - 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
 
-## Try yourself
+### Step 1 — Konfigurasi DHCP-Client dan Allowaccess
+Konfigurasikan port1 (wan) bisa dengan static/dhcp disini saya menggunakan dhcp dan allow access untuk service yang ingin kita gunakan
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+<p align="left">
+  <img src="img/1.png">
+</p>
 
-### Step 1 — Summary of Step
+### Step 2 — Cek IP dari DHCP-Server
+Karena saya menggunakan dhcp pastikan sudah mendapatkan ip dari dhcp-server 
 
-![Screenshot](https://via.placeholder.com/500x300)
+<p align="left">
+  <img src="img/2.png">
+</p>
 
-### Step 1 — Summary of Step
 
-![Screenshot](https://via.placeholder.com/500x300)
+### Step 3 — Cek Dashboard Web Fortinet
+Jika sudah mendapatkan ip dari dhcp-server mari coba kita akses di website dengan tampilan dashboard sebagai berikut
 
-### Step 3 — Summary of Step
+<p align="left">
+  <img src="img/5.png">
+</p>
 
-![Screenshot](https://via.placeholder.com/500x300)
+### Step 4 — Konfigurasi IP LAN dan DMZ
+Untuk konfigurasi ip ke arah LAN dan DMZ kita konfigurasikan via GUI di web
+
+<p align="left">
+  <img src="img/6.png">
+</p>
+
+Dibawah ini untuk konfigurasi IP arah LAN
+
+<p align="left">
+  <img src="img/8.png">
+</p>
+
+Dibawah ini untuk konfigurasi IP arah DMZ
+
+<p align="left">
+  <img src="img/9.png">
+</p>
 
 ## ☁️ Cloud Outcome
 
