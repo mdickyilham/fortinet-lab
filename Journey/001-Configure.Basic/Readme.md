@@ -18,10 +18,7 @@
 
 ✍️ Digunakan saat pertama kali konfigurasi di perangkat Fortinet 
 
-## Fortinet Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
 
 ### Step 1 — Konfigurasi DHCP-Client dan Allowaccess
 Konfigurasikan port1 (wan) bisa dengan static/dhcp disini saya menggunakan dhcp dan allow access untuk service yang ingin kita gunakan
