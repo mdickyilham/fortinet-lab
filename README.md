@@ -13,7 +13,7 @@
 - [✍️ Link to your Twitter](https://twitter.com/username)
 - [✍️ Link to your LinkedIn](https://www.linkedin.com/in/username)
 
-## Stepping out the door
+## CHAPTER 1
 
 - [ ] 📕 1 > [Configure Basic](Journey/001-Configure.Basic/Readme.md)
 - [ ] 📕 2 > [](Journey/002/Readme.md)
