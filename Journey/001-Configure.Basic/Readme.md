@@ -4,33 +4,31 @@
   <img src="img/topologi.png">
 </p>
 
-# New post title here
+# Configure Basic
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+✍️ Kali ini kita konfigurasikan dasar dari Fortinet dengan menggunakan VMWare dan Install Pnetlab
 
 ## Prerequisite
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+✍️ Konfigurasi kali ini membutuhkan pengetahuan konfigurasi dasar jaringan
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+✍️ Digunakan saat pertama kali konfigurasi di perangkat Fortinet 
 
-## Cloud Research
+## Fortinet Research
 
 - ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
 - 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
 
-## Try yourself
-
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
-
 ### Step 1 — Summary of Step
+Konfigurasikan port1 (wan) bisa dengan static/dhcp disini saya menggunakan dhcp
 
-![Screenshot](https://via.placeholder.com/500x300)
+<p align="center">
+  <img src="img/1.png">
+</p>
 
 ### Step 1 — Summary of Step
 
