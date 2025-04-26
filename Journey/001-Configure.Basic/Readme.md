@@ -18,10 +18,7 @@
 
 ✍️ Digunakan saat pertama kali konfigurasi di perangkat Fortinet 
 
-## Fortinet Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
 
 ### Step 1 — Konfigurasi DHCP-Client dan Allowaccess
 Konfigurasikan port1 (wan) bisa dengan static/dhcp disini saya menggunakan dhcp dan allow access untuk service yang ingin kita gunakan
@@ -64,16 +61,64 @@ Dibawah ini untuk konfigurasi IP arah DMZ
   <img src="img/9.png">
 </p>
 
-## ☁️ Cloud Outcome
+Berikut hasil dari IP LAN dan DMZ
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+<p align="left">
+  <img src="img/10.png">
+</p>
 
-## Next Steps
+### Step 5 — Tes Konektifitas dari Fortinet ke LAN dan DMZ
+Cek ping ke arah router di LAN dan DMZ
 
-✍️ Describe what you think you think you want to do next.
+<p align="left">
+  <img src="img/11.png">
+</p>
 
-## Social Proof
+### Step 6 — Konfigurasi NAT di segmentasi LAN
+Kita cek router di LAN belum bisa terhubung ke internet karena belum ada NAT
 
-✍️ Show that you shared your process on Twitter or LinkedIn
+<p align="left">
+  <img src="img/12.png">
+</p>
 
-[link](link)
+Konfigurasikan NAT pada Fortigate
+
+<p align="left">
+  <img src="img/13.png">
+</p>
+
+<p align="left">
+  <img src="img/13.1.png">
+</p>
+
+Cek lagi koneksi di Router-2 apakah sudah bisa terhubung ke internet ?
+
+<p align="left">
+  <img src="img/14.png">
+</p>
+
+### Step 7 — Policy LAN ke DMZ
+Cek dari segmentasi LAN apakah bisa terhubung ke segmentaasi DMZ ?
+
+<p align="left">
+  <img src="img/15.png">
+</p>
+
+Belum bisa karena kita belum membuat rule untuk menerima paket dari LAN menuju DMZ harus kita buat di policy Fortigate
+
+<p align="left">
+  <img src="img/16.png">
+</p>
+
+Kita cek lagi dari Router-2 menujue ke segmentasi DMZ
+
+<p align="left">
+  <img src="img/17.png">
+</p>
+
+### Step 8 — Summary dari Policy NAT dan ACC LAN ke DMZ
+Berikut hasil dari konfigurasi NAT dan Policy LAN ke DMZ
+
+<p align="left">
+  <img src="img/18.png">
+</p>
