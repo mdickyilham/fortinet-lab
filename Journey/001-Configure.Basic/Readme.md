@@ -23,20 +23,46 @@
 - ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
 - 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
 
-### Step 1 — Summary of Step
-Konfigurasikan port1 (wan) bisa dengan static/dhcp disini saya menggunakan dhcp
+### Step 1 — Konfigurasi DHCP-Client dan Allowaccess
+Konfigurasikan port1 (wan) bisa dengan static/dhcp disini saya menggunakan dhcp dan allow access untuk service yang ingin kita gunakan
 
 <p align="left">
   <img src="img/1.png">
 </p>
 
-### Step 1 — Summary of Step
+### Step 2 — Cek IP dari DHCP-Server
+Karena saya menggunakan dhcp pastikan sudah mendapatkan ip dari dhcp-server 
 
-![Screenshot](https://via.placeholder.com/500x300)
+<p align="left">
+  <img src="img/2.png">
+</p>
 
-### Step 3 — Summary of Step
 
-![Screenshot](https://via.placeholder.com/500x300)
+### Step 3 — Cek Dashboard Web Fortinet
+Jika sudah mendapatkan ip dari dhcp-server mari coba kita akses di website dengan tampilan dashboard sebagai berikut
+
+<p align="left">
+  <img src="img/5.png">
+</p>
+
+### Step 4 — Konfigurasi IP LAN dan DMZ
+Untuk konfigurasi ip ke arah LAN dan DMZ kita konfigurasikan via GUI di web
+
+<p align="left">
+  <img src="img/6.png">
+</p>
+
+Dibawah ini untuk konfigurasi IP arah LAN
+
+<p align="left">
+  <img src="img/8.png">
+</p>
+
+Dibawah ini untuk konfigurasi IP arah DMZ
+
+<p align="left">
+  <img src="img/9.png">
+</p>
 
 ## ☁️ Cloud Outcome
 
