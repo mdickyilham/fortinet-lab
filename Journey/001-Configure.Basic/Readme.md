@@ -26,7 +26,7 @@
 ### Step 1 — Summary of Step
 Konfigurasikan port1 (wan) bisa dengan static/dhcp disini saya menggunakan dhcp
 
-<p align="center">
+<p align="left">
   <img src="img/1.png">
 </p>
 
