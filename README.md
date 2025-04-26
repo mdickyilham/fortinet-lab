@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png">
+  <img src="Fortinet_Logo.png">
 </p>
 
 ## The Challenge
