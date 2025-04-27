@@ -16,7 +16,7 @@
 ## CHAPTER 1
 
 - [ ] 📕 1 > [Configure Basic](Journey/001-Configure.Basic/Readme.md)
-- [ ] 📕 2 > [](Journey/002/Readme.md)
+- [ ] 📕 2 > [Sub Vlan Interface](Journey/002-Sub.Vlan.Interface/Readme.md)
 - [ ] 📕 3 > [](Journey/003/Readme.md)
 - [ ] 📕 4 > [](Journey/004/Readme.md)
 - [ ] 📕 5 > [](Journey/005/Readme.md)
