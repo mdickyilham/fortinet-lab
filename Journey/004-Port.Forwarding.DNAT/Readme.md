@@ -1,52 +1,86 @@
 **Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+# Topologi
+<p align="center">
+  <img src="img/1.png">
+</p>
 
-# New post title here
+# Configure Port Forwarding DNAT
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+✍️ Kali ini kita konfigurasikan Port Forwarding pada Fortigate
 
 ## Prerequisite
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+✍️ Konfigurasi kali ini membutuhkan pengetahuan konfigurasi dasar jaringan
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+✍️ Digunakan jika ingin mengakses sistem kita dari luar menggunakan port tertentu
 
-## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
 
-## Try yourself
+### Step 1 — Konfigurasi Virtual IP
+Konfigurasi virtual ip di menu virtual ip
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+<p align="left">
+  <img src="img/2.png">
+</p>
 
-### Step 1 — Summary of Step
+Buat port forwarding sesuai topologi dengan saat akses ip 10.0.137.250:2323 akan mengarah ke telnet 192.168.10.2:23
 
-![Screenshot](https://via.placeholder.com/500x300)
+<p align="center">
+  <img src="img/3.png">
+</p>
 
-### Step 1 — Summary of Step
+Buat port forwarding sesuai topologi dengan saat akses ip 10.0.137.250:2424 akan mengarah ke telnet 192.168.20.2:23
 
-![Screenshot](https://via.placeholder.com/500x300)
+<p align="center">
+  <img src="img/4.png">
+</p>
 
-### Step 3 — Summary of Step
+Cek ulang konfigurasi virtual ip
 
-![Screenshot](https://via.placeholder.com/500x300)
+<p align="center">
+  <img src="img/5.png">
+</p>
 
-## ☁️ Cloud Outcome
+### Step 2 — Buat Policy dari Virtual IP
+Cek koneksi dari WAN Public untuk akses ke ip dari yang kita konfigurasi sesuai topologi masih belum bisa
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+<p align="center">
+  <img src="img/10.png">
+</p>
 
-## Next Steps
+<p align="center">
+  <img src="img/11.png">
+</p>
 
-✍️ Describe what you think you think you want to do next.
+Buat Firewall Policy di menu Policy & Object
 
-## Social Proof
+<p align="center">
+  <img src="img/6.png">
+</p>
 
-✍️ Show that you shared your process on Twitter or LinkedIn
+Buat policy untuk membuat akses dari WAN Public saat akses 10.0.137.250:2323 dan mengarah ke telnet 192.168.10.2:23
 
-[link](link)
+<p align="center">
+  <img src="img/7.png">
+</p>
+
+Buat policy untuk membuat akses dari WAN Public saat akses 10.0.137.250:2424 dan mengarah ke telnet 192.168.20.2:23
+
+<p align="center">
+  <img src="img/8.png">
+</p>
+
+### Step 3 — Cek Koneksi Telnet dari Public
+Bisa dilihat dibawah saat kita akses ip di fortigate dan dengan port forwarding kita otomatis mengakses ke ip sesuai tujuan
+
+<p align="center">
+  <img src="img/12.png">
+</p>
+
+<p align="center">
+  <img src="img/13.png">
+</p>
