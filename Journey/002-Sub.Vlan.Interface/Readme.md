@@ -1,52 +1,82 @@
 **Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+# Topologi
+<p align="center">
+  <img src="img/1.png">
+</p>
 
-# New post title here
+# Configure Sub Vlan Interface
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+✍️ Kali ini kita konfigurasikan Sub Vlan Interface untuk kebutuhan segmentasi network yang berbeda di DMZ
 
 ## Prerequisite
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+✍️ Konfigurasi kali ini membutuhkan pengetahuan konfigurasi dasar jaringan
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+✍️ Digunakan saat ingin memisahkan segmentasi menjadi 2 jaringan atau lebih
 
-## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
 
-## Try yourself
+### Step 1 — Konfigurasi Vlan
+Konfigurasikan new interface yag nantinya akan vlan akan tertambat di port 3
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+<p align="left">
+  <img src="img/2.png">
+</p>
 
-### Step 1 — Summary of Step
+Buat vlan 10 dan vlan 20 dengan ip sesuai topologi untuk gateway
 
-![Screenshot](https://via.placeholder.com/500x300)
+<p align="left">
+  <img src="img/3.png">
+</p>
 
-### Step 1 — Summary of Step
+<p align="left">
+  <img src="img/4.png">
+</p>
 
-![Screenshot](https://via.placeholder.com/500x300)
+Berikut hasil hasil dari vlan 10 dan 20 di interface port 3
 
-### Step 3 — Summary of Step
+<p align="left">
+  <img src="img/5.png">
+</p>
 
-![Screenshot](https://via.placeholder.com/500x300)
+### Step 2 — Koneksi Fortigate ke Sub Vlan
+Kita tes koneksi fortigate ke sub vlan di vlan 10 dan vlan 20
 
-## ☁️ Cloud Outcome
+<p align="left">
+  <img src="img/6.png">
+</p>
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+### Step 3 — Policy LAN ke DMZ
+Kita tes koneksi dari Router-2 di segmentasi LAN menuju segmentasi DMZ dengan Sub Vlan
 
-## Next Steps
+<p align="left">
+  <img src="img/7.png">
+</p>
 
-✍️ Describe what you think you think you want to do next.
+Karena belum ada policy untuk allow dari LAN ke DMZ kita perlu membuatnya di Policy Fortigate untuk mengarah ke vlan 10 dan vlan 20
 
-## Social Proof
+<p align="left">
+  <img src="img/8.png">
+</p>
 
-✍️ Show that you shared your process on Twitter or LinkedIn
+<p align="left">
+  <img src="img/9.png">
+</p>
 
-[link](link)
+Berikut hasil dari konfigurasi policy
+
+<p align="left">
+  <img src="img/10.png">
+</p>
+
+Kita tes lagi koneksi dari segmentasi LAN ke DMZ dengan Sub Vlan
+
+<p align="left">
+  <img src="img/11.png">
+</p>
+
+Bisa dilihat dari segmentasi LAN sudah bisa terhubung ke segmentasi DMZ dengan Sub Vlan
