@@ -17,8 +17,8 @@
 
 - [ ] 📕 1 > [Configure Basic](Journey/001-Configure.Basic/Readme.md)
 - [ ] 📕 2 > [Sub Vlan Interface](Journey/002-Sub.Vlan.Interface/Readme.md)
-- [ ] 📕 3 > [](Journey/003/Readme.md)
-- [ ] 📕 4 > [](Journey/004/Readme.md)
+- [ ] 📕 3 > [DNAT Virtual IP](Journey/003-DNAT.Virtual.IP/Readme.md)
+- [ ] 📕 4 > [Port Forwarding DNAT](Journey/004-Port.Forwarding.DNAT/Readme.md)
 - [ ] 📕 5 > [](Journey/005/Readme.md)
 - [ ] 📕 6 > [](Journey/006/Readme.md)
 - [ ] 📕 7 > [](Journey/007/Readme.md)
