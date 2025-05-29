@@ -103,21 +103,21 @@ Pastikan tanda up sudah beruhan dari tanda down sebelumnya
 ### Step 5 — Show Firewall Policy 
 Kita cek firewall policy di HQ dan Branch
 <p align="center">
-<img src="img/17.png">
-</p>
-
-<p align="center">
-<img src="img/18.png">
-</p>
-
-### Step 6 — Cek lagi koneksi Router HQ dan Router Branch 
-Setelah di lakukan VPN untuk kedua site kita cek lagi koneksi vpn antar router hq dan branch
-<p align="center">
 <img src="img/19.png">
 </p>
 
 <p align="center">
 <img src="img/20.png">
+</p>
+
+### Step 6 — Cek lagi koneksi Router HQ dan Router Branch 
+Setelah di lakukan VPN untuk kedua site kita cek lagi koneksi vpn antar router hq dan branch
+<p align="center">
+<img src="img/17.png">
+</p>
+
+<p align="center">
+<img src="img/18.png">
 </p>
 
 Bisa di lihat sudah terhubung koneksi antar office dengan menggunakan VPN IPsec dengan Fortigate
