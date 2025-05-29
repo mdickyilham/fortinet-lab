@@ -126,4 +126,4 @@ Bisa di lihat sudah terhubung koneksi antar office dengan menggunakan VPN IPsec 
 <img src="img/21.png">
 </p>
 
-Dari hasil di atas juga sudah bit packet yang melewati jalur vpn saat kita coba lakukan tes koneksi ulang antar router office
+Dari hasil di atas juga sudah byte packet yang melewati jalur vpn saat kita coba lakukan tes koneksi ulang antar router office
