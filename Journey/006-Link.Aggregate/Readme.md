@@ -1,52 +1,128 @@
 **Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+# Topologi
+<p align="center">
+  <img src="img/1.png">
+</p>
 
-# New post title here
+# Configure Link Aggregate
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+✍️ Kali ini kita konfigurasikan Link Aggregate LACP Fortigate dengan Switch Cisco
 
 ## Prerequisite
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+✍️ Konfigurasi kali ini membutuhkan pengetahuan konfigurasi dasar jaringan
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+✍️ Digunakan jika ingin membuat 2 port menjadi throughput yang lebih besar karena di gabung ataupun untuk fault tolerance
 
-## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+### Step 1 — Konfigurasi Dasar
+Konfigurasikan awal sesuai topologi untuk ip address di masing-masing interface di Fortiage HQ atau Branch
 
-## Try yourself
+<p align="left">
+  <img src="img/2.png">
+</p>
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+<p align="center">
+  <img src="img/3.png">
+</p>
 
-### Step 1 — Summary of Step
+Tes Koneksi dari Router HQ dan Router Branch yang masih belum bisa terhubung
 
-![Screenshot](https://via.placeholder.com/500x300)
+<p align="center">
+  <img src="img/4.png">
+</p>
 
-### Step 1 — Summary of Step
+<p align="center">
+  <img src="img/5.png">
+</p>
 
-![Screenshot](https://via.placeholder.com/500x300)
+### Step 2 — Konfigurasi VPN IPsec pada Fortigate HQ Office
+Buat VPN nya di menu VPN >> IPsec Wizard, pilih nama VPN dan perangkat VPN di sisi remote menggunakan apa kali ini kita menggunakan FortiGate jadi pilih Fortigate
+<p align="center">
+  <img src="img/6.png">
+</p>
 
-### Step 3 — Summary of Step
+Pilih Remote Address alamat IP Fortigate sisi lawan yang ingin dilakukan vpn dan tambahkan pre-shared key untuk keamanan
+<p align="center">
+  <img src="img/7.png">
+</p>
 
-![Screenshot](https://via.placeholder.com/500x300)
+Selanjutnya pilih local-address dan remote address sebagai tujuan koneksi mana yang akan diizinkan di sisi local dan remote
+<p align="center">
+  <img src="img/8.png">
+</p>
 
-## ☁️ Cloud Outcome
+Ini hasil review konfigurasi IPsec Wizard yang kita konfig pastikan benar parameter" yang digunakan
+<p align="center">
+  <img src="img/9.png">
+</p>
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
 
-## Next Steps
+### Step 3 — Konfigurasi VPN IPsec pada Fortigate Branch Office
+Buat VPN nya di menu VPN >> IPsec Wizard, pilih nama VPN dan perangkat VPN di sisi remote menggunakan apa kali ini kita menggunakan FortiGate jadi pilih Fortigate
+<p align="center">
+  <img src="img/10.png">
+</p>
 
-✍️ Describe what you think you think you want to do next.
+Pilih Remote Address alamat IP Fortigate sisi lawan yang ingin dilakukan vpn dan tambahkan pre-shared key untuk keamanan
+<p align="center">
+  <img src="img/11.png">
+</p>
 
-## Social Proof
+Selanjutnya pilih local-address dan remote address sebagai tujuan koneksi mana yang akan diizinkan di sisi local dan remote
+<p align="center">
+  <img src="img/12.png">
+</p>
 
-✍️ Show that you shared your process on Twitter or LinkedIn
+Ini hasil review konfigurasi IPsec Wizard yang kita konfig pastikan benar parameter" yang digunakan
+<p align="center">
+  <img src="img/13.png">
+</p>
 
-[link](link)
+### Step 4 — Aktifkan VPN HQ-Office dan Branch-Office di HQ-Office
+Untuk mengaktifkanya kita perlu membuat state up pada phase 2 sesuai tanda merah di menu IPsec Tunnel klik phase2
+<p align="center">
+  <img src="img/14.png">
+</p>
+
+Pilih bring up pada phase 2 
+<p align="center">
+  <img src="img/15.png">
+</p>
+
+Pastikan tanda up sudah beruhan dari tanda down sebelumnya
+<p align="center">
+<img src="img/16.png">
+</p>
+
+### Step 5 — Show Firewall Policy 
+Kita cek firewall policy di HQ dan Branch
+<p align="center">
+<img src="img/19.png">
+</p>
+
+<p align="center">
+<img src="img/20.png">
+</p>
+
+### Step 6 — Cek lagi koneksi Router HQ dan Router Branch 
+Setelah di lakukan VPN untuk kedua site kita cek lagi koneksi vpn antar router hq dan branch
+<p align="center">
+<img src="img/17.png">
+</p>
+
+<p align="center">
+<img src="img/18.png">
+</p>
+
+Bisa di lihat sudah terhubung koneksi antar office dengan menggunakan VPN IPsec dengan Fortigate
+
+<p align="center">
+<img src="img/21.png">
+</p>
+
+Dari hasil di atas juga sudah byte packet yang melewati jalur vpn saat kita coba lakukan tes koneksi ulang antar router office
