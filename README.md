@@ -20,7 +20,7 @@
 - [ ] 📕 3 > [DNAT Virtual IP](Journey/003-DNAT.Virtual.IP/Readme.md)
 - [ ] 📕 4 > [Port Forwarding DNAT](Journey/004-Port.Forwarding.DNAT/Readme.md)
 - [ ] 📕 5 > [VPN IPsec](Journey/005-Vpn.Ipsec/Readme.md)
-- [ ] 📕 6 > [](Journey/006/Readme.md)
+- [ ] 📕 6 > [Link Aggregate LACP](Journey/006-Link.Aggregate/Readme.md)
 - [ ] 📕 7 > [](Journey/007/Readme.md)
 - [ ] 📕 8 > [](Journey/008/Readme.md)
 - [ ] 📕 9 > [](Journey/009/Readme.md)
