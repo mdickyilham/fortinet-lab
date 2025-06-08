@@ -4,7 +4,7 @@
   <img src="img/1.png">
 </p>
 
-# Configure Link Aggregate
+# Configure High Availability
 
 ## Introduction
 
