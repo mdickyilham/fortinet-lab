@@ -11,7 +11,7 @@
 [✍️ Tell us where you want to be at the end of the challenge]
 
 - [✍️ Link to your Twitter](https://twitter.com/username)
-- [✍️ LinkedIn](https://www.linkedin.com/in/muhamad-dicky-ilhamsyah-613b341a5/)
+- Linkedin : [✍️ Muhamad Dicky Ilhamsyah](https://www.linkedin.com/in/muhamad-dicky-ilhamsyah-613b341a5/)
 
 ## Fortinet Basic
 
